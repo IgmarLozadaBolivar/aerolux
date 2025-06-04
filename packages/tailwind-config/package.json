@@ -1,0 +1,13 @@
+{
+  "name": "@aerolux/tailwind-config",
+  "version": "0.0.1",
+  "main": "tailwind.config.js",
+  "type": "module",
+  "license": "MIT",
+  "dependencies": {
+    "@tailwindcss/postcss": "^4.1.8",
+    "autoprefixer": "^10.4.21",
+    "postcss": "^8.5.4",
+    "tailwindcss": "^4.1.8"
+  }
+}
