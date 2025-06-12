@@ -1,0 +1,162 @@
+---
+import React from 'react';
+import { BadgeInfo } from 'lucide-react';
+import { Image } from "astro:assets";
+import Lines_Img from '@repo/assets/public/images/lines-bg.svg';
+import Img_Socio_I_Car from '@repo/assets/public/logos/i-car.svg';
+import Img_Socio_Hertz from '@repo/assets/public/logos/hertz.svg';
+import Img_Socio_IHG from '@repo/assets/public/logos/ihg.svg';
+import Img_Socio_Accor_All from '@repo/assets/public/logos/accor-all.svg';
+import Img_Socio_Avis from '@repo/assets/public/logos/avis.svg';
+import Img_Socio_Jatris from '@repo/assets/public/logos/jatri.svg';
+import Bg_Image_Search from '@repo/assets/public/images/bg-image.jpg';
+import { CheckedButton } from '@repo/ui/form-flights/radiobutton';
+import { FlightTypeSelector } from '@repo/ui/form-flights/flighttypeselector';
+import SearchFormDropdown from '@repo/ui/form-flights/SelectorCity';
+import SearchFormDates from '@repo/ui/form-flights/SelectorDates';
+import { Button } from '@repo/ui/button';
+import { Search } from 'lucide-react';
+import { PrimeReactProvider } from 'primereact/api';
+import Flag_Spain_Icon from "*.svg";
+---
+
+<div class = { 'search-content font-cabinRegular relative' } >
+    <Image
+        class = { 'absolute w-full inset-0' }
+        src = { Lines_Img }
+        alt = { 'lines_back_img' }
+        loading = { 'lazy' }
+        decoding = { 'async' }
+    />
+
+    <div class = { 'container gap-5 flex-wrap max-w-full' }>
+        <div class = { 'bg-image w-full h-[37.5rem] pt-[5.625rem] relative' }>
+            <Image
+                    class = { 'w-full h-full object-cover' }
+                    src = { Bg_Image_Search }
+                    alt = 'bg_image_search'
+                    loading = 'lazy'
+                    decoding = 'async'
+            />
+
+            <div class="absolute inset-0 flex flex-col items-center justify-center text-white">
+                <div class="w-[1000px] flex flex-col gap-9">
+                    <div class="title">
+                        <h1 class="font-reaktifBold text-4xl text-start">Tu próxima aventura está a un clic</h1>
+                    </div>
+
+                    <div class="form-search relative z-10 bg-[#EFF3F6]/60 w-full h-[150px] rounded-2xl">
+                        <div class="form-content relative w-full h-full px-6 pt-4">
+                            <div class="elements-top mb-2 flex items-center gap-16 pr-4 pl-4">
+                                <div class="group-button flex items-center justify-center bg-white w-[250px] h-[40px] border-[#E0E4E7] rounded-3xl">
+                                    <FlightTypeSelector className = { 'flex gap-4' } />
+                                </div>
+                                <div class="button-message flex gap-16">
+                                    <CheckedButton
+                                        className = { 'checkbox bg-[#FFFFFF] border-[#667085] checked:bg-[#FFFFFF] checked:text-[#037980] checked:border-[#037980]' }
+                                        type = { 'checkbox' }
+                                        name = { 'accumulate_points' }
+                                        value = { 'Quiero acumular Aeropoints' }
+                                    />
+
+                                    <div class="message flex items-center justify-center bg-white rounded-3xl gap-2 w-[320px] h-[40px]">
+                                        <BadgeInfo color = { '#F76C6C' } size = { 20 } />
+                                        <p class="text-black">
+                                            Por favor, <a href="#" class="text-[#F76C6C] underline">iniciar sesión</a> para acumular.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="elements-bottom gap-6 absolute left-0 right-0 mx-auto top-[70px] w-full h-[80px] bg-white rounded-2xl shadow-md z-20 flex items-center px-4 justify-center ">
+                                <div class="selectors-cities flex gap-6">
+                                    <PrimeReactProvider>
+                                        <SearchFormDropdown client:only = "react" />
+                                    </PrimeReactProvider>
+                                </div>
+                                <div class="selectors-dates">
+                                    <PrimeReactProvider>
+                                        <SearchFormDates client:only = "react" />
+                                    </PrimeReactProvider>
+                                </div>
+
+                                <Button appName = { "Buscar vuelos" } className = { "flex items-center gap-2.5 bg-[#00A896] w-[100px] h-[40px] rounded-lg p-2" } >
+                                    <Search color="#FFFFFF" size={20} />
+                                    <span>Buscar</span>
+                                </Button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="socios flex gap-10 flex-nowrap max-w-full relative pt-28 justify-center pl-20 pr-20">
+            <div class="img-socio-1 w-[250px] h-[100px]">
+                <div class = { 'container-img' } >
+                    <Image
+                            class = { 'w-full h-full object-cover' }
+                            src = { Img_Socio_I_Car }
+                            alt = "socio-one-i-car"
+                            loading = "lazy"
+                            decoding = "async"
+                    />
+                </div>
+            </div>
+            <div class="img-socio-2 w-[270px] h-[100px]">
+                <div class = { 'container-img' } >
+                    <Image
+                            class = { 'w-full h-full object-cover' }
+                            src = { Img_Socio_Hertz }
+                            alt = "socio-one-i-car"
+                            loading = "lazy"
+                            decoding = "async"
+                    />
+                </div>
+            </div>
+            <div class="img-socio-3 w-[200px] h-[100px]">
+                <div class = { 'container-img' } >
+                    <Image
+                            class = { 'w-full h-full object-cover' }
+                            src = { Img_Socio_IHG }
+                            alt = "socio-one-i-car"
+                            loading = "lazy"
+                            decoding = "async"
+                    />
+                </div>
+            </div>
+            <div class="img-socio-4 w-[180px] h-[100px]">
+                <div class = { 'container-img' } >
+                    <Image
+                            class = { 'w-full h-full object-cover' }
+                            src = { Img_Socio_Accor_All }
+                            alt = "socio-one-i-car"
+                            loading = "lazy"
+                            decoding = "async"
+                    />
+                </div>
+            </div>
+            <div class="img-socio-5 w-[230px] h-[100px]">
+                <div class = { 'container-img' } >
+                    <Image
+                            class = { 'w-full h-full object-cover' }
+                            src = { Img_Socio_Avis }
+                            alt = "socio-one-i-car"
+                            loading = "lazy"
+                            decoding = "async"
+                    />
+                </div>
+            </div>
+            <div class="img-socio-6 w-[180px] h-[100px]">
+                <div class = { 'container-img' } >
+                    <Image
+                            class = { 'w-full h-full object-cover' }
+                            src = { Img_Socio_Jatris }
+                            alt = "socio-one-i-car"
+                            loading = "lazy"
+                            decoding = "async"
+                    />
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
