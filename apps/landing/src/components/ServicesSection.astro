@@ -1,0 +1,19 @@
+---
+import {TitleDivider} from "@repo/ui/TitleDivider";
+import Lines_Img from "@repo/assets/public/images/lines-bg.svg";
+import {Image} from "astro:assets";
+---
+
+<div class="services-content font-cabinRegular relative">
+    <Image
+        class = { 'absolute w-full inset-0' }
+        src = { Lines_Img }
+        alt = { 'lines_back_img' }
+        loading = { 'lazy' }
+        decoding = { 'async' }
+    />
+
+    <div class="container gap-5 flex-wrap max-w-full pt-[5.625rem] pl-20">
+        <TitleDivider className = "w-auto" title = "Complementa tu experiencia" />
+    </div>
+</div>
