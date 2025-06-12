@@ -1,0 +1,30 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "moduleResolution": "bundler",
+    "paths": {
+      "@repo/ui/*": [
+        "packages/ui/src/*"
+      ],
+      "@componentsAstro/*": [
+        "apps/landing/src/components/*"
+      ],
+      "@layoutsAstro/*": [
+        "apps/landing/src/layouts/*"
+      ],
+      "@repo/styles/*": [
+        "packages/tailwind-config/*"
+      ],
+      "@repo/fonts/*": [
+        "packages/fonts/*"
+      ],
+      "@repo/assets/*": [
+        "packages/assets/*"
+      ]
+    }
+  },
+  "include": [
+    "apps",
+    "packages"
+  ]
+}
