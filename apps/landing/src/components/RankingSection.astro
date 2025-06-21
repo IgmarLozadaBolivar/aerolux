@@ -1,0 +1,238 @@
+---
+import { TitleDivider } from "@repo/ui/TitleDivider";
+import { Image } from 'astro:assets';
+import Lines_Img from "@repo/assets/public/images/lines-bg.svg";
+import TimesSquare from "@repo/assets/public/images/times-square.jpeg";
+import SagradaFamilia from "@repo/assets/public/images/sagrada-familia.jpeg";
+import WaltDisney from "@repo/assets/public/images/walt-disney.jpeg";
+import Alhambra from "@repo/assets/public/images/alhambra.jpeg";
+import Vegas from "@repo/assets/public/images/vegas.jpeg";
+import MuseoPrado from "@repo/assets/public/images/museo-prado.jpeg";
+import { ChevronLeft, ChevronRight } from "lucide-react";
+import { Button } from "@repo/ui/button";
+---
+
+
+<div class="container-ranking font-cabinRegular relative">
+    <Image
+            class = { 'absolute w-full inset-0' }
+            src = { Lines_Img }
+            alt = { 'lines_back_img' }
+            loading = { 'lazy' }
+            decoding = { 'async' }
+    />
+
+    <div class="container-group flex flex-col pl-20 pb-20 gap-14">
+        <div class="container gap-5 flex-wrap max-w-full pt-[5.625rem] relative">
+            <TitleDivider className = "w-auto border-[#F76C6C]" title = "Ranking de destinos más visitados" />
+        </div>
+
+        <!-- Destinos - Tarjetas (img && h<num> && p || span) -->
+        <div class="content flex flex-col justify-start gap-8">
+
+            <!-- 3 destinos -->
+            <div class="elements-top flex gap-8">
+
+                <div class="destino-1 relative w-[422px] h-[422px] rounded-3xl overflow-hidden bg-black/60">
+                    <Image
+                        class = { 'w-full h-full object-cover bg-black bg-blend-multiply' }
+                        src = { TimesSquare }
+                        alt = { 'service_flight_img' }
+                        loading = { 'lazy' }
+                        decoding = { 'async' }
+                    />
+
+                    <div class="absolute inset-0 bg-gradient-to-b from-transparent to-[#000000]/100 z-10"></div>
+
+                    <div class="absolute top-4 left-4 right-4 z-20 flex justify-between items-center">
+                        <div class="w-16 h-10 z-20 flex justify-center items-center gap-2 bg-black/60 px-2 py-1 rounded-lg text-white text-[16px]">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 fill-[#FFFFFF] text-[#FFFFFF]" viewBox="0 0 24 24"><path d="M12 .587l3.668 7.571L24 9.748l-6 5.879L19.335 24 12 20.202 4.665 24 6 15.627 0 9.748l8.332-1.59z"/></svg>
+                            4.9
+                        </div>
+
+                        <button class="bg-white/60 p-2 h-10 w-10 rounded-full flex items-center justify-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-black" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 016.364 0L12 7.636l1.318-1.318a4.5 4.5 0 116.364 6.364L12 21.364l-7.682-7.682a4.5 4.5 0 010-6.364z" />
+                            </svg>
+                        </button>
+                    </div>
+
+                    <div class="absolute bottom-4 left-0 right-0 z-20 flex flex-col items-center text-white text-center px-4">
+                        <span class="text-2xl font-cabinBold tracking-wide">- New York -</span>
+                        <h2 class="text-3xl font-reaktifBold">Time Square</h2>
+                    </div>
+                </div>
+
+                <div class="destino-2 relative w-[422px] h-[422px] rounded-3xl overflow-hidden bg-black/60">
+                    <Image
+                            class = { 'w-full h-full object-cover bg-black bg-blend-multiply' }
+                            src = { SagradaFamilia }
+                            alt = { 'sagrada_familia_img' }
+                            loading = { 'lazy' }
+                            decoding = { 'async' }
+                    />
+
+                    <div class="absolute inset-0 bg-gradient-to-b from-transparent to-[#000000]/100 z-10"></div>
+
+                    <div class="absolute top-4 left-4 right-4 z-20 flex justify-between items-center">
+                        <div class="w-16 h-10 z-20 flex justify-center items-center gap-2 bg-black/60 px-2 py-1 rounded-lg text-white text-[16px]">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 fill-[#FFFFFF] text-[#FFFFFF]" viewBox="0 0 24 24"><path d="M12 .587l3.668 7.571L24 9.748l-6 5.879L19.335 24 12 20.202 4.665 24 6 15.627 0 9.748l8.332-1.59z"/></svg>
+                            4.8
+                        </div>
+
+                        <button class="bg-white/60 p-2 h-10 w-10 rounded-full flex items-center justify-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-black" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 016.364 0L12 7.636l1.318-1.318a4.5 4.5 0 116.364 6.364L12 21.364l-7.682-7.682a4.5 4.5 0 010-6.364z" />
+                            </svg>
+                        </button>
+                    </div>
+
+                    <div class="absolute bottom-4 left-0 right-0 z-20 flex flex-col items-center text-white text-center px-4">
+                        <span class="text-2xl font-cabinBold tracking-wide">- Barcelona -</span>
+                        <h2 class="text-3xl font-reaktifBold">Sagrada Familia</h2>
+                    </div>
+                </div>
+
+                <div class="destino-3 relative w-[422px] h-[422px] rounded-3xl overflow-hidden bg-black/60">
+                    <Image
+                            class = { 'w-full h-full object-cover bg-black bg-blend-multiply' }
+                            src = { WaltDisney }
+                            alt = { 'walt_disney_img' }
+                            loading = { 'lazy' }
+                            decoding = { 'async' }
+                    />
+
+                    <div class="absolute inset-0 bg-gradient-to-b from-transparent to-[#000000]/100 z-10"></div>
+
+                    <div class="absolute top-4 left-4 right-4 z-20 flex justify-between items-center">
+                        <div class="w-16 h-10 z-20 flex justify-center items-center gap-2 bg-black/60 px-2 py-1 rounded-lg text-white text-[16px]">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 fill-[#FFFFFF] text-[#FFFFFF]" viewBox="0 0 24 24"><path d="M12 .587l3.668 7.571L24 9.748l-6 5.879L19.335 24 12 20.202 4.665 24 6 15.627 0 9.748l8.332-1.59z"/></svg>
+                            4.7
+                        </div>
+
+                        <button class="bg-white/60 p-2 h-10 w-10 rounded-full flex items-center justify-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-black" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 016.364 0L12 7.636l1.318-1.318a4.5 4.5 0 116.364 6.364L12 21.364l-7.682-7.682a4.5 4.5 0 010-6.364z" />
+                            </svg>
+                        </button>
+                    </div>
+
+                    <div class="absolute bottom-4 left-0 right-0 z-20 flex flex-col items-center text-white text-center px-4">
+                        <span class="text-2xl font-cabinBold tracking-wide">- Orlando -</span>
+                        <h2 class="text-3xl font-reaktifBold">Walt Disney</h2>
+                    </div>
+                </div>
+            </div>
+
+            <div class="elements-bottom flex gap-8">
+                <div class="destino-1 relative w-[422px] h-[422px] rounded-3xl overflow-hidden bg-black/60">
+                    <Image
+                            class = { 'w-full h-full object-cover bg-black bg-blend-multiply' }
+                            src = { Alhambra }
+                            alt = { 'la_alhambra_img' }
+                            loading = { 'lazy' }
+                            decoding = { 'async' }
+                    />
+
+                    <div class="absolute inset-0 bg-gradient-to-b from-transparent to-[#000000]/100 z-10"></div>
+
+                    <div class="absolute top-4 left-4 right-4 z-20 flex justify-between items-center">
+                        <div class="w-16 h-10 z-20 flex justify-center items-center gap-2 bg-black/60 px-2 py-1 rounded-lg text-white text-[16px]">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 fill-[#FFFFFF] text-[#FFFFFF]" viewBox="0 0 24 24"><path d="M12 .587l3.668 7.571L24 9.748l-6 5.879L19.335 24 12 20.202 4.665 24 6 15.627 0 9.748l8.332-1.59z"/></svg>
+                            4.6
+                        </div>
+
+                        <button class="bg-white/60 p-2 h-10 w-10 rounded-full flex items-center justify-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-black" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 016.364 0L12 7.636l1.318-1.318a4.5 4.5 0 116.364 6.364L12 21.364l-7.682-7.682a4.5 4.5 0 010-6.364z" />
+                            </svg>
+                        </button>
+                    </div>
+
+                    <div class="absolute bottom-4 left-0 right-0 z-20 flex flex-col items-center text-white text-center px-4">
+                        <span class="text-2xl font-cabinBold tracking-wide">- Granada -</span>
+                        <h2 class="text-3xl font-reaktifBold">Alhambra</h2>
+                    </div>
+                </div>
+
+                <div class="destino-2 relative w-[422px] h-[422px] rounded-3xl overflow-hidden bg-black/60">
+                    <Image
+                            class = { 'w-full h-full object-cover bg-black bg-blend-multiply' }
+                            src = { Vegas }
+                            alt = { 'las_vegas_img' }
+                            loading = { 'lazy' }
+                            decoding = { 'async' }
+                    />
+
+                    <div class="absolute inset-0 bg-gradient-to-b from-transparent to-[#000000]/100 z-10"></div>
+
+                    <div class="absolute top-4 left-4 right-4 z-20 flex justify-between items-center">
+                        <div class="w-16 h-10 z-20 flex justify-center items-center gap-2 bg-black/60 px-2 py-1 rounded-lg text-white text-[16px]">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 fill-[#FFFFFF] text-[#FFFFFF]" viewBox="0 0 24 24"><path d="M12 .587l3.668 7.571L24 9.748l-6 5.879L19.335 24 12 20.202 4.665 24 6 15.627 0 9.748l8.332-1.59z"/></svg>
+                            4.5
+                        </div>
+
+                        <button class="bg-white/60 p-2 h-10 w-10 rounded-full flex items-center justify-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-black" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 016.364 0L12 7.636l1.318-1.318a4.5 4.5 0 116.364 6.364L12 21.364l-7.682-7.682a4.5 4.5 0 010-6.364z" />
+                            </svg>
+                        </button>
+                    </div>
+
+                    <div class="absolute bottom-4 left-0 right-0 z-20 flex flex-col items-center text-white text-center px-4">
+                        <span class="text-2xl font-cabinBold tracking-wide">- Nevada -</span>
+                        <h2 class="text-3xl font-reaktifBold">Las Vegas</h2>
+                    </div>
+                </div>
+
+                <div class="destino-3 relative w-[422px] h-[422px] rounded-3xl overflow-hidden bg-black/60">
+                    <Image
+                            class = { 'w-full h-full object-cover bg-black bg-blend-multiply' }
+                            src = { MuseoPrado }
+                            alt = { 'el_museo_del_prado_img' }
+                            loading = { 'lazy' }
+                            decoding = { 'async' }
+                    />
+
+                    <div class="absolute inset-0 bg-gradient-to-b from-transparent to-[#000000]/100 z-10"></div>
+
+                    <div class="absolute top-4 left-4 right-4 z-20 flex justify-between items-center">
+                        <div class="w-16 h-10 z-20 flex justify-center items-center gap-2 bg-black/60 px-2 py-1 rounded-lg text-white text-[16px]">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 fill-[#FFFFFF] text-[#FFFFFF]" viewBox="0 0 24 24"><path d="M12 .587l3.668 7.571L24 9.748l-6 5.879L19.335 24 12 20.202 4.665 24 6 15.627 0 9.748l8.332-1.59z"/></svg>
+                            4.4
+                        </div>
+
+                        <button class="bg-white/60 p-2 h-10 w-10 rounded-full flex items-center justify-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-black" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 016.364 0L12 7.636l1.318-1.318a4.5 4.5 0 116.364 6.364L12 21.364l-7.682-7.682a4.5 4.5 0 010-6.364z" />
+                            </svg>
+                        </button>
+                    </div>
+
+                    <div class="absolute bottom-4 left-0 right-0 z-20 flex flex-col items-center text-white text-center px-4">
+                        <span class="text-2xl font-cabinBold tracking-wide">- Madrid -</span>
+                        <h2 class="text-3xl font-reaktifBold">Museo del Prado</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="w-full flex justify-end">
+            <div class="navigation-buttons pr-20 font-reaktifNews relative flex items-center justify-between max-w-[900px] w-full">
+                <div class="count-text">
+                    <span class="text-4xl text-[#333333]" >02</span>
+                    <span class="text-2xl text-[#78858F]" >/06</span>
+                </div>
+
+                <div class="buttons flex items-center gap-4">
+                    <Button appName="btn-prev" className = { "rounded-full bg-[#F2F2F2] w-[50px] h-[50px] justify-items-center" } >
+                        <ChevronLeft color="#344054" />
+                    </Button>
+                    <Button appName="btn-next" className = { "rounded-full bg-[#F2F2F2] w-[50px] h-[50px] justify-items-center" } >
+                        <ChevronRight color="#344054" />
+                    </Button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
