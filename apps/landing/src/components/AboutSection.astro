@@ -1,0 +1,117 @@
+---
+import { Image } from "astro:assets";
+import Lines_Img from "@repo/assets/public/images/lines-bg.svg";
+import { TitleDivider } from "@repo/ui/TitleDivider";
+import { Button } from "@repo/ui/button";
+import { ArrowUpRight } from "lucide-react";
+import Mountains from "@repo/assets/public/images/mountains.jpg";
+import Village from "@repo/assets/public/images/village.jpg";
+import Muralla_China from "@repo/assets/public/images/muralla-china.jpg";
+import Niagara_Falls from "@repo/assets/public/images/niagara-falls.jpeg";
+---
+
+<div class="about-section font-cabinRegular relative">
+    <Image
+        class = { 'absolute w-full inset-0' }
+        src = { Lines_Img }
+        alt = { 'lines_back_img' }
+        loading = { 'lazy' }
+        decoding = { 'async' }
+    />
+
+    <div class="container-principal flex flex-col">
+        <div class="container gap-5 flex-wrap max-w-full pt-[5.625rem] pl-20 pb-16 relative">
+            <TitleDivider className = "w-auto" title = "Descubre todo sobre nosotros" />
+        </div>
+
+        <div class="container-content flex justify-between items-center pl-20 pr-20 pb-20 relative">
+            <div class="container-info flex flex-col gap-5">
+                <div class="marca">
+                    <p class="font-cabinRegular text-xl leading-5 tracking-[0.2em] text-[#F76C6C]">
+                        AEROLUX
+                    </p>
+                </div>
+
+                <div class="title">
+                    <h1 class="text-6xl font-reaktifNews">
+                        Quiénes somos
+                    </h1>
+                </div>
+
+                <div class="information flex flex-col leading-8 text-[18px]">
+                    <span>
+                        En AeroLux, hacemos que viajar sea más fácil, rápido y
+                    </span>
+                    <span>
+                        accesible. Nuestra plataforma está diseñada para ayudarte a
+                    </span>
+                    <span>
+                        encontrar los mejores vuelos, alquileres de autos y servicios
+                    </span>
+                    <span>
+                        adicionales para que tu experiencia sea perfecta.
+                    </span>
+                </div>
+
+                <div class="cta-button">
+                    <Button
+                            appName = { "AeroLux" }
+                            className = {
+                                "font-cabinBold " + // font-family: cabin bold
+                    "text-[0.75rem] " + // font-size: 12px
+                    "flex " + // display: flex
+                    "justify-center " + // justify-content: center
+                    "items-center " + // align-items: center
+                    "gap-1 " + // gap: 4px
+                    "border-2 " + // border-with: 2px
+                    "border-[#000000] " + // border-color: #000000
+                    "p-2.5 " + // padding: 10px
+                    "pr-3 " + // padding-right: 12px
+                    "pl-3 " // padding-left: 12px
+                }
+                    >
+                        <span class="text-sm" >Contáctanos</span>
+                        <ArrowUpRight size = { "18" } />
+                    </Button>
+                </div>
+            </div>
+
+            <div class="container-image">
+                <div class="flex flex-col gap-4 mx-auto">
+
+                    <div class="w-[700px] h-full">
+                        <Image
+                            src = { Mountains }
+                            alt = "turismo en las montañas"
+                            class = "w-full h-[180px] object-cover rounded-3xl"
+                        />
+                    </div>
+
+                    <div class="relative w-[700px] h-[260px] rounded-3xl overflow-hidden">
+                        <Image
+                            src = { Village }
+                            alt = "villa como isla"
+                            class = "w-full h-full object-cover"
+                            style = {{
+                                clipPath: "path('M0 0 L0 135.2 L210 135.2 A28 20 0 0 1 238 155.2 L238 260 " +
+                                    "L462 260 L462 155.2 A28 20 0 0 1 490.28 135.2 L700 135.2 L700 0 Z')"
+                            }}
+                        />
+
+                        <Image
+                            src = { Muralla_China }
+                            alt = "muralla china"
+                            class = "absolute bottom-0 left-0 w-[230px] h-[116px] object-cover rounded-2xl"
+                        />
+
+                        <Image
+                            src = { Niagara_Falls }
+                            alt = "cataratas del niágara"
+                            class = "absolute bottom-0 right-0 w-[230px] h-[116px] object-cover rounded-2xl"
+                        />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
