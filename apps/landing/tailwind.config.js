@@ -23,4 +23,7 @@ module.exports = {
         themes: ["light", "dark"],
         logs: true
     },
+    safelist: [
+        "clip-[path('M10,40L70,40L80,30L80,10L90,0L140,0L150,10L150,190L140,200L10,200L0,190L0,50L10,40Z')]",
+    ],
 }
