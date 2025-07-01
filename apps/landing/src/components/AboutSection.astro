@@ -8,6 +8,8 @@ import Mountains from "@repo/assets/public/images/mountains.jpg";
 import Village from "@repo/assets/public/images/village.jpg";
 import Muralla_China from "@repo/assets/public/images/muralla-china.jpg";
 import Niagara_Falls from "@repo/assets/public/images/niagara-falls.jpeg";
+import Mision from "@repo/assets/public/images/mision.jpeg";
+import Vision from "@repo/assets/public/images/vision.jpeg";
 ---
 
 <div class="about-section font-cabinRegular relative">
@@ -109,6 +111,55 @@ import Niagara_Falls from "@repo/assets/public/images/niagara-falls.jpeg";
                             alt = "cataratas del niágara"
                             class = "absolute bottom-0 right-0 w-[230px] h-[116px] object-cover rounded-2xl"
                         />
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container-content flex flex-col justify-between items-center pl-20 pr-20 pb-20 relative">
+            <Image
+                    class = { 'absolute w-full inset-0' }
+                    src = { Lines_Img }
+                    alt = { 'lines_back_img' }
+                    loading = { 'lazy' }
+                    decoding = { 'async' }
+            />
+            <div class="container-info flex flex-col gap-20 justify-between relative w-full">
+                <div class="tarjeta flex flex-row-reverse justify-between items-center gap-10 w-full">
+                    <div class="image w-[600px] h-[260px] flex-shrink-0">
+                        <Image
+                                src={Mision}
+                                alt="mision de la aerolinea"
+                                class="w-full h-full object-cover rounded-3xl"
+                        />
+                    </div>
+
+                    <div class="tarjeta-content max-w-[600px]">
+                        <h2 class="text-8xl font-reaktifBold">Misión</h2>
+                        <p class="text-xl leading-relaxed">
+                            Facilitar la experiencia de viaje de nuestros usuarios <br />
+                            con los mejores vuelos disponibles, <br />
+                            alquileres de autos y servicios adicionales.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="tarjeta flex justify-between items-center gap-10 w-full">
+                    <div class="image w-[600px] h-[260px] flex-shrink-0">
+                        <Image
+                                src={Vision}
+                                alt="vision de la aerolinea"
+                                class="w-full h-full object-cover rounded-3xl"
+                        />
+                    </div>
+
+                    <div class="tarjeta-content max-w-[600px]">
+                        <h2 class="text-8xl font-reaktifBold">Visión</h2>
+                        <p class="text-xl leading-relaxed">
+                            Convertirnos en la mayor referencia para nuestros <br />
+                            viajeros con soluciones innovadoras para la planificación <br />
+                            de sus viajes y disfrutar de una gran experiencia.
+                        </p>
                     </div>
                 </div>
             </div>
