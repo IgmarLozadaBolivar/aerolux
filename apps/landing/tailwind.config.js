@@ -1,5 +1,6 @@
 /** @type {path.PlatformPath | path} */
 const path = require("path");
+const { heroui } = require("@heroui/react");
 
 module.exports = {
     darkMode: 'class',
@@ -18,7 +19,10 @@ module.exports = {
             }
         }
     },
-    plugins: [require('daisyui')],
+    plugins: [
+        require('daisyui'),
+        heroui()
+    ],
     daisyui: {
         themes: ["light", "dark"],
         logs: true
