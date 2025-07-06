@@ -1,0 +1,180 @@
+---
+import { Image } from "astro:assets";
+import Lines_Img from "@repo/assets/public/images/lines-bg.svg";
+import Icon_Facebook from "@repo/assets/public/icons/Facebook.svg";
+import Icon_X from "@repo/assets/public/icons/X.svg";
+import Icon_Instagram from "@repo/assets/public/icons/Instagram.svg";
+import Icon_Youtube from "@repo/assets/public/icons/Youtube.svg";
+import { TitleDivider } from "@repo/ui/TitleDivider";
+import { HeroUIProvider } from "@heroui/react";
+import AccordionFaq from "./AccordionFaq";
+import { MailOpen, Phone, MapPin } from "lucide-react";
+---
+
+<div class="about-section font-cabinRegular relative">
+    <Image
+            class="absolute w-full inset-0"
+            src={Lines_Img}
+            alt="lines_back_img"
+            loading="lazy"
+            decoding="async"
+    />
+
+    <div class="container-principal flex flex-col">
+        <div class="container gap-5 flex-wrap max-w-full pt-[5.625rem] pl-20 pb-16 relative">
+            <TitleDivider className="w-auto border-[#F76C6C]" title="Preguntas frecuentes" />
+        </div>
+
+        <div class="relative pl-20 pr-20 pb-16">
+            <HeroUIProvider>
+                <AccordionFaq client:load/>
+            </HeroUIProvider>
+        </div>
+    </div>
+
+    <div class="footer-container pl-20 pr-20 pb-16 relative">
+        <footer>
+            <div class="elements-top flex justify-between items-center">
+                <div class="elements-left">
+                    <div class="texrt p-2 flex flex-col gap-1">
+                        <h1 class="font-reaktifBold text-5xl">AeroLux</h1>
+                        <p class="text-base font-cabinRegular text-[#424242]">
+                            Encuentra, reserva y viaja sin complicaciones. Tu próxima aventura <br>
+                            comienza aquí.
+                        </p>
+                    </div>
+                    <div class="contacts text-base font-cabinRegular p-2 text-[#344054]">
+                        <ul class="flex flex-col gap-2">
+                            <li>
+                                <a href="#" class="flex items-center gap-2 text-base">
+                                    <MailOpen size={18} />
+                                    aerolux@gmail.com
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="flex items-center gap-2 text-base">
+                                    <Phone size={18} />
+                                    +1 234 567 890
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="flex items-center gap-2 text-base">
+                                    <MapPin size={18} />
+                                    1234 Main Street, City, State, ZIP
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="elements-right flex items-center gap-16">
+                    <div class="elements-left flex flex-col justify-center text-base font-cabinRegular">
+                        <h4 class="font-cabinBold text-xl text-[#1A1A1A]">Secciones</h4>
+                        <ul class="text-[#424242] text-base font-cabinRegular flex flex-col gap-2">
+                            <li>
+                                <a href="#">Inicio</a>
+                            </li>
+                            <li>
+                                <a href="#">Servicios</a>
+                            </li>
+                            <li>
+                                <a href="#">Ranking</a>
+                            </li>
+                            <li>
+                                <a href="#">Nosotros</a>
+                            </li>
+                            <li>
+                                <a href="#">FAQs</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="elements-intermediate flex flex-col justify-center">
+                        <h4 class="font-cabinBold text-xl text-[#1A1A1A]">Servicios</h4>
+                        <ul class="text-[#424242] text-base font-cabinRegular flex flex-col gap-2">
+                            <li>
+                                <a href="#">Vuelos</a>
+                            </li>
+                            <li>
+                                <a href="#">Autos</a>
+                            </li>
+                            <li>
+                                <a href="#">Hoteles</a>
+                            </li>
+                            <li>
+                                <a href="#">Platillos</a>
+                            </li>
+                            <li>
+                                <a href="#">Mascotas</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="elements-right flex flex-col justify-center">
+                        <h4 class="font-cabinBold text-xl text-[#1A1A1A]">Ranking</h4>
+                        <ul class="text-[#424242] text-base font-cabinRegular flex flex-col gap-2">
+                            <li>
+                                <a href="#">Times Square</a>
+                            </li>
+                            <li>
+                                <a href="#">Sagrada Familia</a>
+                            </li>
+                            <li>
+                                <a href="#">National Mall</a>
+                            </li>
+                            <li>
+                                <a href="#">La Alhambra</a>
+                            </li>
+                            <li>
+                                <a href="#">Las Vegas Strip</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="line pt-2 pb-2">
+                <hr class=" border-[#344054]">
+            </div>
+            <div class="elements-bottom flex justify-between items-center">
+                <div class="copyright">
+                    <p>Copyright © 2025 - All rights Reserved</p>
+                </div>
+                <div class="social-links flex items-center gap-3">
+                    <div class="facebook w-[40px] h-[39.5px] ">
+                        <Image
+                            class="w-full h-full"
+                            src={Icon_Facebook}
+                            alt="lines_back_img"
+                            loading="lazy"
+                            decoding="async"
+                        />
+                    </div>
+                    <div class="x w-[40px] h-[39.5px] ">
+                        <Image
+                                class="w-full h-full"
+                                src={Icon_X}
+                                alt="lines_back_img"
+                                loading="lazy"
+                                decoding="async"
+                        />
+                    </div>
+                    <div class="instagram w-[40px] h-[39.5px] ">
+                        <Image
+                                class="w-full h-full"
+                                src={Icon_Instagram}
+                                alt="lines_back_img"
+                                loading="lazy"
+                                decoding="async"
+                        />
+                    </div>
+                    <div class="youtube w-[40px] h-[39.5px] ">
+                        <Image
+                                class="w-full h-full"
+                                src={Icon_Youtube}
+                                alt="lines_back_img"
+                                loading="lazy"
+                                decoding="async"
+                        />
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+</div>
